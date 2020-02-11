@@ -13,4 +13,18 @@ class PersonTableViewCell: UITableViewCell {
     @IBOutlet weak var genderLabel: UILabel!
     @IBOutlet weak var birthYearLabel: UILabel!
     
+    var person: Person? {
+        didSet {
+            updateViews()
+        }
+    }
+    
+   private func updateViews() {
+        if let person = person {
+            nameLabel.text = person.name
+            genderLabel.text = "Gender: \(person.gender)"
+            birthYearLabel.text = "Birth year: \(person.birthYear)"
+        }
+    }
+    
 }

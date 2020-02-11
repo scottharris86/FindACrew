@@ -20,6 +20,10 @@ struct Person: Codable {
         
     }
     
-    
+}
+
+
+struct PersonSearch: Decodable {
+    let results: [Person]
     
 }
