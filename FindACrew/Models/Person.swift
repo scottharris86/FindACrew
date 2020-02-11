@@ -16,7 +16,7 @@ struct Person: Codable {
     enum CodingKeys: String, CodingKey {
         case name
         case gender
-        case birthYeat = "birth_year"
+        case birthYear = "birth_year"
         
     }
     
